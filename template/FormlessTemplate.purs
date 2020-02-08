@@ -1,6 +1,6 @@
 module FormlessTemplate where
 
-import Prelude
+-- import Prelude
 
 import DOM.HTML.Indexed.InputType (InputType(..))
 import Data.Maybe (Maybe(..))

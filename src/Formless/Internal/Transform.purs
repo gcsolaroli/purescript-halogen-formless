@@ -1,9 +1,18 @@
 module Formless.Internal.Transform where
 
-import Prelude
+-- import Prelude
 
+import Control.Applicative (pure)
+import Control.Apply ((<*>))
+import Control.Bind (bind)
+import Control.Category (identity)
+import Control.Monad (class Monad)
+import Control.Semigroupoid ((<<<))
+import Data.Function (($))
+import Data.Functor (map, (<@>), (<$>))
 import Data.Maybe (Maybe(..))
 import Data.Newtype (class Newtype, over, unwrap, wrap)
+import Data.Semiring ((+))
 import Data.Symbol (class IsSymbol, SProxy(..))
 import Data.Tuple (Tuple(..), fst, snd)
 import Data.Variant (Variant)

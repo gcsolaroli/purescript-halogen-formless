@@ -1,10 +1,15 @@
 module Formless.Internal.Component where
 
-import Prelude
+-- import Prelude
 
+import Control.Applicative (pure, when)
+import Control.Bind (bind, discard)
+import Data.HeytingAlgebra (not)
 import Data.Maybe (Maybe(..))
 import Data.Newtype (class Newtype, over, unwrap)
+import Data.Semiring ((+))
 import Data.Symbol (SProxy(..))
+import Data.Unit (Unit)
 import Effect.Aff.Class (class MonadAff)
 import Formless.Internal.Transform as Internal
 import Formless.Types.Component (HalogenM, InternalState(..), PublicState, State, ValidStatus(..))

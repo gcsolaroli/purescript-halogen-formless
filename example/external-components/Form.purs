@@ -1,11 +1,20 @@
 module Example.ExternalComponents.Form where
 
-import Prelude
+-- import Prelude
 
+import Control.Bind (bind, discard)
+import Control.Semigroupoid ((<<<), (>>>))
 import Data.Const (Const)
+import Data.Eq (class Eq, (/=))
 import Data.Maybe (Maybe(..), fromMaybe)
+import Data.Function (const, ($), (#))
+import Data.Functor (void)
+import Data.HeytingAlgebra (not, (||))
 import Data.Newtype (class Newtype)
+import Data.Ord (class Ord)
 import Data.Symbol (SProxy(..))
+import Data.Unit (Unit)
+import Data.Void (Void)
 import Effect.Aff (Aff)
 import Effect.Class.Console (logShow)
 import Example.App.UI.Element as UI

@@ -1,15 +1,26 @@
 module Example.App.Validation where
 
-import Prelude
+-- import Prelude
 
+import Control.Applicative (pure)
+import Control.Bind (bind)
+import Control.Category (identity)
+import Control.Monad (class Monad)
+import Control.Semigroupoid ((<<<))
+import Data.Eq (class Eq)
 import Data.Either (Either(..))
 import Data.Foldable (length) as Foldable
+import Data.Function (($))
+import Data.Functor (map)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Int (fromString) as Int
 import Data.Lens (preview)
 import Data.Maybe (Maybe, maybe)
 import Data.Newtype (class Newtype)
+import Data.Ord ((<), (>))
+import Data.Semigroup ((<>))
+import Data.Show (class Show, show)
 import Data.String (contains, length, null)
 import Data.String.Pattern (Pattern(..))
 import Effect.Aff (Milliseconds(..), delay)

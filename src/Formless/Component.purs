@@ -1,15 +1,25 @@
 module Formless.Component where
 
-import Prelude
+-- import Prelude
 
+import Control.Applicative (pure)
+import Control.Apply ((*>))
+import Control.Bind (bind, discard, (>>=))
+import Control.Category (identity)
 import Control.Monad.Free (liftF)
-import Data.Eq (class EqRecord)
+import Control.Semigroupoid ((<<<), (>>>))
+import Data.Eq (class EqRecord, eq, (==))
+import Data.Function (const, flip, ($))
+import Data.Functor (map, (<$))
 import Data.Functor.Variant as VF
+import Data.HeytingAlgebra (not)
 import Data.Maybe (Maybe(..))
+import Data.Monoid (mempty)
 import Data.Newtype (class Newtype, over, unwrap)
 import Data.Symbol (SProxy(..))
 import Data.Traversable (traverse_)
 import Data.Tuple (Tuple(..))
+import Data.Unit (Unit, unit)
 import Data.Variant (Variant, match, inj, expand)
 import Effect.Aff.Class (class MonadAff)
 import Effect.Ref as Ref

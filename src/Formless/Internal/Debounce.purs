@@ -1,10 +1,16 @@
 module Formless.Internal.Debounce where
 
-import Prelude
+-- import Prelude
 
+import Control.Bind (bind, discard, join, (>>=))
+import Control.Category (identity)
+import Control.Semigroupoid ((<<<))
+import Data.Function (($))
+import Data.Functor (map, void)
 import Data.Maybe (Maybe(..))
 import Data.Newtype (unwrap)
 import Data.Traversable (traverse, traverse_, for_)
+import Data.Unit (Unit, unit)
 import Effect.Aff (Fiber, Milliseconds, delay, error, forkAff, killFiber)
 import Effect.Aff.AVar (AVar)
 import Effect.Aff.AVar as AVar

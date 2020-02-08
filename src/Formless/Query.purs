@@ -5,11 +5,18 @@
 -- | `injQuery` function.
 module Formless.Query where
 
-import Prelude
+-- import Prelude
 
+import Control.Applicative (pure)
+import Control.Category (identity)
+import Control.Semigroupoid ((<<<))
+import Data.Function (($))
+import Data.Functor (class Functor)
 import Data.Functor.Variant as VF
 import Data.Maybe (Maybe(..), maybe)
+import Data.Ord (class Ord)
 import Data.Symbol (class IsSymbol, SProxy(..))
+import Data.Unit (Unit)
 import Data.Variant (Variant)
 import Formless.Types.Component (QueryF(..), Query, PublicAction)
 import Formless.Types.Form (OutputField)

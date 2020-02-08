@@ -1,8 +1,11 @@
 module Example.App.Home where
 
-import Prelude
+-- import Prelude
 
 import Data.Const (Const)
+import Data.Function (const)
+import Data.Unit (Unit, unit)
+import Data.Void (Void)
 import Effect.Aff (Aff)
 import Example.App.UI.Element as UI
 import Halogen as H

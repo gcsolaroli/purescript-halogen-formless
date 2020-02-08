@@ -1,7 +1,8 @@
 module Formless.Types.Form where
 
-import Prelude
+-- import Prelude
 
+import Data.Eq (class Eq)
 import Data.Newtype (class Newtype)
 import Formless.Data.FormFieldResult (FormFieldResult)
 

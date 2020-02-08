@@ -1,12 +1,20 @@
 module Example.App.UI.Dropdown where
 
-import Prelude
+-- import Prelude
 
+import Control.Applicative (pure)
+import Control.Bind (bind, discard)
+import Control.Semigroupoid ((<<<))
 import DOM.HTML.Indexed (HTMLbutton)
 import Data.Array (difference, mapWithIndex, length, (!!))
+import Data.Eq (class Eq, (==))
+import Data.Function (($))
+import Data.Functor ((<$>))
 import Data.Maybe (Maybe(..), fromMaybe)
 import Data.Symbol (SProxy(..))
 import Data.Traversable (for_)
+import Data.Unit (Unit, unit)
+import Data.Void (Void)
 import Effect.Aff.Class (class MonadAff)
 import Example.App.UI.Element (class_)
 import Example.App.UI.Element as UI

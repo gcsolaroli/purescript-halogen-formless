@@ -1,10 +1,14 @@
 module Example.Async.Component where
 
-import Prelude
+-- import Prelude
 
+import Control.Semigroupoid ((<<<), (>>>))
 import Data.Const (Const)
+import Data.Function (const, ($), (#))
 import Data.Maybe (Maybe(..))
 import Data.Newtype (class Newtype)
+import Data.Unit (Unit, unit)
+import Data.Void (Void)
 import Effect.Aff (Aff, Milliseconds(..))
 import Effect.Console (logShow)
 import Example.App.UI.Element as UI

@@ -1,15 +1,25 @@
 module Example.Nested.Form where
 
-import Prelude
+-- import Prelude
 
+import Control.Applicative (pure)
+import Control.Apply ((*>))
+import Control.Bind (bind, discard)
+import Control.Semigroupoid ((<<<), (>>>))
 import Data.Array (filter, snoc, catMaybes)
 import Data.Const (Const)
+import Data.Eq ((/=))
 import Data.Either (Either(..))
+import Data.Function (const, ($), (#))
+import Data.Functor (map, (<$>))
 import Data.List (toUnfoldable)
 import Data.Map as M
 import Data.Maybe (Maybe(..), fromMaybe)
 import Data.Newtype (class Newtype)
+import Data.Semiring ((+))
 import Data.Symbol (SProxy(..))
+import Data.Unit (Unit, unit)
+import Data.Void (Void)
 import Effect.Aff (Aff)
 import Example.App.UI.Element (class_)
 import Example.App.UI.Element as UI

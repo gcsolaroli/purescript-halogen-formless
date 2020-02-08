@@ -1,9 +1,13 @@
 module Example.ExternalComponents.Page where
 
-import Prelude
+-- import Prelude
 
+import Control.Semigroupoid ((<<<))
 import Data.Const (Const)
+import Data.Function (const, ($))
 import Data.Maybe (Maybe(..))
+import Data.Unit (Unit, unit)
+import Data.Void (Void)
 import Effect.Aff (Aff)
 import Effect.Class.Console (logShow)
 import Example.App.UI.Element as UI

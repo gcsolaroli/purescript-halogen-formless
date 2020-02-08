@@ -1,12 +1,16 @@
 module Example.Basic.Component where
 
-import Prelude
+-- import Prelude
 
+import Control.Semigroupoid ((<<<))
 import Data.Const (Const)
 import Data.Either (Either(..))
+import Data.Function (const, ($))
 import Data.Maybe (Maybe(..))
 import Data.Newtype (class Newtype)
 import Data.Symbol (SProxy(..))
+import Data.Unit (Unit, unit)
+import Data.Void (Void)
 import Effect.Aff (Aff)
 import Effect.Console (logShow)
 import Example.App.UI.Element as UI

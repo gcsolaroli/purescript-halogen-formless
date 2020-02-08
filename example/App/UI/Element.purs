@@ -1,12 +1,16 @@
 module Example.App.UI.Element where
 
-import Prelude
+-- import Prelude
 
+import Control.Semigroupoid ((<<<), (>>>))
 import DOM.HTML.Indexed (HTMLa, HTMLbutton, HTMLinput, HTMLtextarea)
 import DOM.HTML.Indexed.InputType (InputType(..))
 import Data.Either (Either(..), either)
+import Data.Function (const, (#), ($))
+import Data.Functor ((<$>))
 import Data.Maybe (Maybe(..), maybe)
 import Data.Newtype (class Newtype)
+import Data.Semigroup ((<>))
 import Data.Symbol (class IsSymbol, SProxy(..))
 import Data.Variant (Variant)
 import Example.App.Validation (class ToText, toText)

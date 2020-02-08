@@ -1,12 +1,19 @@
 module Formless.Data.FormFieldResult where
 
-import Prelude
+-- import Prelude
 
+import Control.Apply (class Apply)
+import Control.Applicative (class Applicative)
+import Control.Bind (class Bind)
+import Control.Monad (class Monad)
 import Data.Either (Either(..))
+import Data.Functor (class Functor, map)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Lens (Prism', prism')
 import Data.Maybe (Maybe(..))
+import Data.Eq (class Eq)
+import Data.Show (class Show)
 
 -- | A data type which represents the possible output states of the field. Use
 -- | the helpers in `Retrieve` to easily manipulate this type.

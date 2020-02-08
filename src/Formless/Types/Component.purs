@@ -1,16 +1,22 @@
 module Formless.Types.Component where
 
-import Prelude
+-- import Prelude
 
 import Data.Const (Const)
+import Data.Eq (class Eq)
+import Data.Functor (class Functor)
 import Data.Functor.Variant (VariantF, FProxy)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe)
 import Data.Newtype (class Newtype)
+import Data.Ord (class Ord)
+import Data.Show (class Show)
 import Data.Symbol (SProxy(..))
 import Data.Tuple (Tuple)
 import Data.Variant (Variant)
+import Data.Unit (Unit)
+import Data.Void (Void)
 import Effect.Aff (Fiber, Milliseconds)
 import Effect.Aff.AVar (AVar)
 import Effect.Ref (Ref)

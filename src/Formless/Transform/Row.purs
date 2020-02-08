@@ -1,7 +1,10 @@
 module Formless.Transform.Row where
 
-import Prelude
+-- import Prelude
 
+import Control.Category (identity)
+import Control.Semigroupoid ((<<<))
+import Data.Function (($))
 import Data.Newtype (class Newtype, wrap)
 import Data.Symbol (class IsSymbol, SProxy(..))
 import Formless.Class.Initial (class Initial, initial)

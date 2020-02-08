@@ -1,7 +1,8 @@
 module Formless.Transform.Record where
 
-import Prelude
+-- import Prelude
 
+import Control.Semigroupoid ((<<<))
 import Data.Newtype (class Newtype, unwrap, wrap)
 import Formless.Types.Form (InputField, InputFunction, OutputField)
 import Heterogeneous.Mapping as HM

@@ -1,10 +1,20 @@
 module Formless.Validation where
 
-import Prelude
+-- import Prelude
 
 import Control.Alt (class Alt, (<|>))
+import Control.Applicative (class Applicative, pure)
+import Control.Apply (class Apply, (<*>))
+import Control.Bind (bind)
+import Control.Category (class Category, identity)
+import Control.Monad (class Monad)
+import Control.Semigroupoid (class Semigroupoid, (<<<))
 import Data.Either (Either(..), either)
+import Data.Function (const, ($))
+import Data.Functor (class Functor)
+import Data.Monoid (class Monoid, mempty)
 import Data.Newtype (class Newtype, unwrap, wrap)
+import Data.Semigroup (class Semigroup, (<>))
 import Formless.Types.Form (FormField, InputField)
 import Heterogeneous.Mapping (class MapRecordWithIndex, class Mapping, ConstMapping, hmap)
 import Prim.RowList (class RowToList)

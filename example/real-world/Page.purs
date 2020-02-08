@@ -1,9 +1,14 @@
 module Example.RealWorld.Page where
 
-import Prelude
+-- import Prelude
 
+import Control.Bind (discard)
+import Control.Semigroupoid ((<<<))
 import Data.Const (Const)
+import Data.Function (($))
 import Data.Maybe (Maybe(..))
+import Data.Unit (Unit, unit)
+import Data.Void (Void)
 import Effect.Aff (Aff)
 import Effect.Console as Console
 import Example.App.UI.Element as UI

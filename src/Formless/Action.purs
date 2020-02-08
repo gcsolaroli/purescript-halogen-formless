@@ -4,13 +4,15 @@
 -- | also freely extend Formless with more actions of your own using `injAction`.
 module Formless.Action where
 
-import Prelude
+-- import Prelude
 
+import Data.Function (const)
 import Data.Maybe (Maybe(..))
 import Data.Newtype (class Newtype, wrap)
 import Data.Symbol (class IsSymbol, SProxy(..))
 import Data.Time.Duration (Milliseconds)
 import Data.Tuple (Tuple(..))
+import Data.Unit (Unit, unit)
 import Data.Variant (Variant, inj)
 import Formless.Class.Initial (class Initial, initial)
 import Formless.Transform.Record (WrapField, wrapInputFields, wrapInputFunctions)

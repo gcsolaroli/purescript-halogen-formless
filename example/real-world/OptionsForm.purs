@@ -1,17 +1,29 @@
 module Example.RealWorld.OptionsForm where
 
-import Prelude
+-- import Prelude
 
+import Control.Bind (bind, discard, when)
+import Control.Applicative (pure)
+import Control.Semigroupoid ((<<<))
 import DOM.HTML.Indexed.InputType (InputType(..))
 import Data.Const (Const)
 import Data.Either (Either(..))
+import Data.Eq (class Eq, (==), (/=))
+import Data.Function (const, ($), (#))
+import Data.Functor (map, (<$>))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
+import Data.HeytingAlgebra (not)
 import Data.Int as Int
 import Data.Maybe (Maybe(..))
 import Data.Monoid (guard)
 import Data.Newtype (class Newtype, over)
+import Data.Ord (class Ord)
+import Data.Semigroup ((<>))
+import Data.Show (class Show, show)
 import Data.Symbol (SProxy(..))
+import Data.Unit (Unit, unit)
+import Data.Void (Void)
 import Effect.Aff (Aff)
 import Example.App.UI.Dropdown as DD
 import Example.App.UI.Element (class_)

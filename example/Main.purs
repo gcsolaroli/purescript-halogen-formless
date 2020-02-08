@@ -1,9 +1,12 @@
 module Main where
 
-import Prelude
+-- import Prelude
 
+import Control.Bind (bind)
+import Data.Function (($))
 import Data.Maybe (Maybe(..))
 import Data.Tuple (Tuple(..))
+import Data.Unit (Unit)
 import Effect (Effect)
 import Effect.Aff (Aff)
 import Example.Basic.Component as Basic

@@ -1,11 +1,20 @@
 module Example.App.UI.Typeahead where
 
-import Prelude
+-- import Prelude
 
+import Control.Bind (bind, discard, pure)
+import Control.Semigroupoid ((<<<))
 import Data.Array (difference, filter, length, (:), (!!))
+import Data.Eq (class Eq, (==), (/=))
+import Data.Function (const, ($))
+import Data.Functor (class Functor, (<#>))
 import Data.Maybe (Maybe(..))
+import Data.Monoid (class Monoid, mempty)
+import Data.Ord ((>))
+import Data.Semigroup (class Semigroup)
 import Data.String as String
 import Data.Symbol (SProxy(..))
+import Data.Unit (Unit, unit)
 import Effect.Aff.Class (class MonadAff)
 import Example.App.UI.Dropdown as Dropdown
 import Example.App.UI.Element (class_)

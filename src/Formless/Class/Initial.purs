@@ -1,12 +1,15 @@
 module Formless.Class.Initial where
 
-import Prelude
+-- import Prelude
 
 import Data.List (List)
 import Data.Map (Map)
 import Data.Maybe (Maybe(..))
-import Data.Monoid (class MonoidRecord)
+import Data.Monoid (class Monoid, class MonoidRecord, mempty)
+import Data.Ord (class Ord)
+import Data.Ordering (Ordering)
 import Data.Set (Set)
+import Data.Unit (Unit)
 import Data.Tuple (Tuple(..))
 import Prim.RowList (class RowToList) as RL
 

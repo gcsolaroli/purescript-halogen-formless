@@ -1,8 +1,9 @@
 -- | A module with functions for retriving particular fields from a form
 module Formless.Retrieve where
 
-import Prelude
+-- import Prelude
 
+import Control.Semigroupoid ((<<<))
 import Data.Lens (Lens', preview, view)
 import Data.Lens.Iso.Newtype (_Newtype)
 import Data.Lens.Record (prop)
